@@ -1,3 +1,11 @@
+-- admin info
+-- username: kemzy
+-- password: 123
+
+-- user info
+-- email: arnold@gmail.com
+-- password: 123456
+
 create database voting_system;
 
 create table admin( 
@@ -63,4 +71,5 @@ CREATE TABLE votes (
     FOREIGN KEY (voter_id) REFERENCES voters(id),
     FOREIGN KEY (election_id) REFERENCES elections(id) ON DELETE CASCADE,
     FOREIGN KEY (candidate_id) REFERENCES candidates(id) ON DELETE CASCADE
+
 );
