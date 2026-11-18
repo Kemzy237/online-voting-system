@@ -1,0 +1,119 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: linear-gradient(180deg, var(--primary-color) 0%, #1a2530 100%);
+    color: white;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar.collapsed {
+    width: var(--sidebar-collapsed-width);
+}
+
+.sidebar-header {
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: var(--header-height);
+}
+
+.sidebar-header h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar-header h3 i {
+    color: var(--admin-color);
+    margin-right: 0.5rem;
+}
+
+#sidebar.collapsed .sidebar-header h3 span {
+    display: none;
+}
+
+#toggle-sidebar {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#toggle-sidebar:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-menu {
+    padding: 1.5rem 0;
+    height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 0.2rem;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.sidebar-menu a i {
+    width: 24px;
+    font-size: 1.1rem;
+    margin-right: 0.8rem;
+    text-align: center;
+}
+
+#sidebar.collapsed .sidebar-menu a span {
+    display: none;
+}
+
+.sidebar-menu .menu-label {
+    padding: 1rem 1.5rem 0.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 1px;
+}
+
+#sidebar.collapsed .sidebar-menu .menu-label {
+    display: none;
+}
